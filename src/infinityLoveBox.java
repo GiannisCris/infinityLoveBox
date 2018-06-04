@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 public class infinityLoveBox {
     private static void boxGUI() {
+
         //set frame layout
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("infinityLove");
@@ -19,8 +20,10 @@ public class infinityLoveBox {
         jMenuBar.add(helpMenu);
 
         //add operationMenu Exit actionlistener
+        //add operationMenu Open actionlistener
         JMenuItem operationExitMI = new JMenuItem("Exit");
         JMenuItem operationOpenMI = new JMenuItem("Open");
+
         operationMenu.add(operationOpenMI);
         operationOpenMI.addActionListener(new ActionListener() {
             @Override
@@ -30,14 +33,17 @@ public class infinityLoveBox {
                         null, null, null);
             }
         });
+
         operationMenu.add(operationExitMI);
         operationExitMI.addActionListener(e -> System.exit(0));
 
         // add operationMenu Information actionlistener
+        // add operationMenu do actionlistener
         JMenuItem helpInformationMI = new JMenuItem("Information");
-        JMenuItem todoInformationMI = new JMenuItem("Todo");
-        helpMenu.add(todoInformationMI);
-        todoInformationMI.addActionListener(new ActionListener() {
+        JMenuItem doInformationMI = new JMenuItem("Do");
+
+        helpMenu.add(doInformationMI);
+        doInformationMI.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showOptionDialog(null, "to show love to ZhangYan", "todo",
@@ -45,6 +51,7 @@ public class infinityLoveBox {
                         null, null, null);
             }
         });
+
         helpMenu.add(helpInformationMI);
         helpInformationMI.addActionListener(e -> JOptionPane.showOptionDialog(null,
                 "program name:  infinityLoveBox \n"
@@ -55,10 +62,12 @@ public class infinityLoveBox {
                 "infinityLoveBox information", JOptionPane.DEFAULT_OPTION,
                 JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
+
         //set menubar
         frame.setJMenuBar(jMenuBar);
         frame.setSize(200, 100);
         frame.setVisible(true);
+
 
 
         //add label
