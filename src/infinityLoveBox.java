@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class infinityLoveBox {
     private static void boxGUI() {
@@ -7,7 +9,56 @@ public class infinityLoveBox {
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("infinityLove");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new GridLayout(5,2));
+        frame.setLayout(new GridLayout(3,2));
+
+        //add menubar
+        JMenuBar jMenuBar = new JMenuBar();
+        JMenu operationMenu = new JMenu("operation");
+        JMenu helpMenu = new JMenu("help");
+        jMenuBar.add(operationMenu);
+        jMenuBar.add(helpMenu);
+
+        //add operationMenu Exit actionlistener
+        JMenuItem operationExitMI = new JMenuItem("Exit");
+        JMenuItem operationOpenMI = new JMenuItem("Open");
+        operationMenu.add(operationOpenMI);
+        operationOpenMI.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showOptionDialog(null, "It's a trick,you fool!", "open what",
+                        JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                        null, null, null);
+            }
+        });
+        operationMenu.add(operationExitMI);
+        operationExitMI.addActionListener(e -> System.exit(0));
+
+        // add operationMenu Information actionlistener
+        JMenuItem helpInformationMI = new JMenuItem("Information");
+        JMenuItem todoInformationMI = new JMenuItem("Todo");
+        helpMenu.add(todoInformationMI);
+        todoInformationMI.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showOptionDialog(null, "to show love to ZhangYan", "todo",
+                        JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                        null, null, null);
+            }
+        });
+        helpMenu.add(helpInformationMI);
+        helpInformationMI.addActionListener(e -> JOptionPane.showOptionDialog(null,
+                "program name:  infinityLoveBox \n"
+                        + "information :  to Zhang Yan\n"
+                        + " created by  :  Your husband ChrisTree\n"
+                        +"\n"
+                        +"Fuck the world\n"+"I love zhangyan forever\n",
+                "infinityLoveBox information", JOptionPane.DEFAULT_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, null, null, null));
+
+        //set menubar
+        frame.setJMenuBar(jMenuBar);
+        frame.setSize(200, 100);
+        frame.setVisible(true);
 
 
         //add label
@@ -80,21 +131,26 @@ public class infinityLoveBox {
 
                             //click yesbutton in the fifth dialog
                             if (resbonse5 == JOptionPane.YES_OPTION) {
-                                JOptionPane.showOptionDialog(null, "You are my lover\n" +
-                                                "You are the one that I won't share\n" +
-                                                "Wherever I go\n" +
-                                                "whoever I know" +
-                                                "However the times flow" +
-                                                "You are one piece of my heart\n" +
-                                                "You are the one I don't wanna lose\n" +
-                                                "So baby you must listen to me\n" +
+                                JOptionPane.showOptionDialog(null,
+                                        "You are my lover.\n" +
+                                                "I love you.\n" +
+                                                "There is only one reason.\n" +
+                                                "YOU ARE THE REASON.\n\n" +
+                                                "You are the one that I won't share.\n" +
+                                                "Wherever I go.\n" +
+                                                "Whoever I know.\n" +
+                                                "However the times flow.\n" +
+                                                "You are one piece of my heart.\n" +
+                                                "You are the one I don't wanna lose.\n" +
+                                                "I want to be with you forever\n\n" +
+                                                "So baby you must listen to me.\n" +
                                                 "For example:\n" +
-                                                "Don't be thinner\n"+
-                                                "You have to eat every meal during a day\n" +
-                                                "You have to sleep earlier\n" +
-                                                "You can not eat spicy\n" +
-                                                "Do not eat cold just like ice cream during the period\n" +
-                                                "I love you forever\n" +
+                                                "Don't be thinner.\n" +
+                                                "You have to eat every meal during a day.\n" +
+                                                "You have to sleep earlier.\n" +
+                                                "You can not eat spicy.\n" +
+                                                "Do not eat cold just like ice cream during the period.\n" +
+                                                "I love you forever.\n\n" +
                                                 "FUCK THE DIRTY WORLD!!!", "LOVE YOU FOREVER♥♥♥♥",
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                                         null, null, null);
@@ -113,7 +169,7 @@ public class infinityLoveBox {
                 null, null, null));
 
 
-        frame.setSize(300, 800);
+        frame.setSize(400,400);
         frame.setVisible(true);
 
     }
