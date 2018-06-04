@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class infinityLoveBox {
     private static void boxGUI() {
@@ -25,14 +23,9 @@ public class infinityLoveBox {
         JMenuItem operationOpenMI = new JMenuItem("Open");
 
         operationMenu.add(operationOpenMI);
-        operationOpenMI.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showOptionDialog(null, "It's a trick,you fool!", "open what",
-                        JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
-                        null, null, null);
-            }
-        });
+        operationOpenMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "It's a trick,you fool!", "open what",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                null, null, null));
 
         operationMenu.add(operationExitMI);
         operationExitMI.addActionListener(e -> System.exit(0));
@@ -43,14 +36,9 @@ public class infinityLoveBox {
         JMenuItem doInformationMI = new JMenuItem("Do");
 
         helpMenu.add(doInformationMI);
-        doInformationMI.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showOptionDialog(null, "to show love to ZhangYan", "todo",
-                        JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
-                        null, null, null);
-            }
-        });
+        doInformationMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "to show love to ZhangYan", "todo",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                null, null, null));
 
         helpMenu.add(helpInformationMI);
         helpInformationMI.addActionListener(e -> JOptionPane.showOptionDialog(null,
@@ -83,63 +71,63 @@ public class infinityLoveBox {
         //add yesbutton and yesbutton_actionlistener
         frame.add(yesButton);
         yesButton.addActionListener(e -> {
-            int resbonse1 = JOptionPane.showOptionDialog(null, "Do you know Cui Zigang?", "infinityLove",
+            int responseOne = JOptionPane.showOptionDialog(null, "Do you know Cui Zigang?", "infinityLove",
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                     null, null, null);
-            if (resbonse1 == JOptionPane.NO_OPTION) {
+            if (responseOne == JOptionPane.NO_OPTION) {
                 JOptionPane.showOptionDialog(null, "please click yes", "tips",
                         JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                         null, null, null);
             }
 
             //click yesbutton in the first dialog
-            if (resbonse1 == JOptionPane.YES_OPTION) {
-                int resbonse2 = JOptionPane.showOptionDialog(null, "Ohh, do you love him?", "infinityLove",
+            if (responseOne == JOptionPane.YES_OPTION) {
+                int responseTwo = JOptionPane.showOptionDialog(null, "Ohh, do you love him?", "infinityLove",
                         JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                         null, null, null);
-                if (resbonse2 == JOptionPane.NO_OPTION) {
+                if (responseTwo == JOptionPane.NO_OPTION) {
                     JOptionPane.showOptionDialog(null, "please click yes", "tips",
                             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                             null, null, null);
                 }
 
                 //click yesbutton in the second dialog
-                if (resbonse2 == JOptionPane.YES_OPTION) {
-                    int resbonse3 = JOptionPane.showOptionDialog(null, "Then is the love deep?", "infinityLove",
+                if (responseTwo == JOptionPane.YES_OPTION) {
+                    int responseThree = JOptionPane.showOptionDialog(null, "Then is the love deep?", "infinityLove",
                             JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                             null, null, null);
-                    if (resbonse3 == JOptionPane.NO_OPTION) {
+                    if (responseThree == JOptionPane.NO_OPTION) {
                         JOptionPane.showOptionDialog(null, "please click yes", "tips",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                                 null, null, null);
                     }
 
                     //click yesbutton in the third dialog
-                    if (resbonse3 == JOptionPane.YES_OPTION) {
-                        int resbonse4 = JOptionPane.showOptionDialog(null, "Do you want him to find you?", "infinityLove",
+                    if (responseThree == JOptionPane.YES_OPTION) {
+                        int responseFour = JOptionPane.showOptionDialog(null, "Do you want him to find you?", "infinityLove",
                                 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                                 null, null, null);
 
-                        if (resbonse4 == JOptionPane.NO_OPTION) {
+                        if (responseFour == JOptionPane.NO_OPTION) {
                             JOptionPane.showOptionDialog(null, "please click yes", "tips",
                                     JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                                     null, null, null);
                         }
 
                         //click yesbutton in the fourth dialog
-                        if (resbonse4 == JOptionPane.YES_OPTION) {
-                            int resbonse5 = JOptionPane.showOptionDialog(null, "Can I find you the next national day?", "infinityLove",
+                        if (responseFour == JOptionPane.YES_OPTION) {
+                            int responseFive = JOptionPane.showOptionDialog(null, "Can I find you the next national day?", "infinityLove",
                                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                                     null, null, null);
 
-                            if (resbonse5 == JOptionPane.NO_OPTION) {
+                            if (responseFive == JOptionPane.NO_OPTION) {
                                 JOptionPane.showOptionDialog(null, "please click yes", "tips",
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                                         null, null, null);
                             }
 
                             //click yesbutton in the fifth dialog
-                            if (resbonse5 == JOptionPane.YES_OPTION) {
+                            if (responseFive == JOptionPane.YES_OPTION) {
                                 JOptionPane.showOptionDialog(null,
                                         "You are my lover.\n" +
                                                 "I love you.\n" +
