@@ -4,6 +4,7 @@ import java.awt.*;
 public class infinityLoveBox {
     private static void boxGUI() {
 
+
         //set frame layout
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("infinityLove");
