@@ -149,6 +149,7 @@ public class infinityLoveBox {
                                                 "You can not eat spicy.\n" +
                                                 "Do not eat cold just like ice cream during the period.\n" +
                                                 "I love you forever.\n\n" +
+                                                "Insist on loving you."+
                                                 "FUCK THE DIRTY WORLD!!!", "LOVE YOU FOREVER♥♥♥♥",
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                                         null, null, null);
