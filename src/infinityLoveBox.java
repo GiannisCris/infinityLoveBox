@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class infinityLoveBox {
     private static void boxGUI() {
@@ -58,23 +56,11 @@ public class infinityLoveBox {
 
         JMenuItem versionVersionMI = new JMenuItem("Version");
         versionMenu.add(versionVersionMI);
-        versionVersionMI.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showOptionDialog(null, "version:0.1beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
-
-            }
-        });
+        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.1beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
         JMenuItem updateTimeVersionMI = new JMenuItem("Updatetime");
         versionMenu.add(updateTimeVersionMI);
-        updateTimeVersionMI.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showOptionDialog(null, "last updatetime : 06/15/2018", "UpdateTime", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
-
-            }
-        });
+        updateTimeVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "last updatetime : 06/15/2018", "UpdateTime", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
 
 
