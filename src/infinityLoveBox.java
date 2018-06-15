@@ -65,6 +65,21 @@ public class infinityLoveBox {
 
             }
         });
+
+        JMenuItem updateTimeVersionMI = new JMenuItem("Updatetime");
+        versionMenu.add(updateTimeVersionMI);
+        updateTimeVersionMI.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showOptionDialog(null, "last updatetime : 06/15/2018", "UpdateTime", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+
+            }
+        });
+
+
+
+
+
         //set menubar
         frame.setJMenuBar(jMenuBar);
         frame.setSize(200, 100);
