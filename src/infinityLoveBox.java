@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class infinityLoveBox {
     private static void boxGUI() {
@@ -15,6 +17,8 @@ public class infinityLoveBox {
         JMenuBar jMenuBar = new JMenuBar();
         JMenu operationMenu = new JMenu("operation");
         JMenu helpMenu = new JMenu("help");
+        JMenu versionMenu = new JMenu("version");
+        jMenuBar.add(versionMenu);
         jMenuBar.add(operationMenu);
         jMenuBar.add(helpMenu);
 
@@ -52,6 +56,15 @@ public class infinityLoveBox {
                 JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
 
+        JMenuItem versionVersionMI = new JMenuItem("Version");
+        versionMenu.add(versionVersionMI);
+        versionVersionMI.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showOptionDialog(null, "version:0.1beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+
+            }
+        });
         //set menubar
         frame.setJMenuBar(jMenuBar);
         frame.setSize(200, 100);
