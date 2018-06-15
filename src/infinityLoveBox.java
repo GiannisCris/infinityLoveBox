@@ -33,13 +33,13 @@ public class infinityLoveBox {
         operationMenu.add(operationExitMI);
         operationExitMI.addActionListener(e -> System.exit(0));
 
-        // add operationMenu Information actionlistener
-        // add operationMenu do actionlistener
+        // add helpMenu Information actionlistener
+        // add helpMenu Do actionlistener
         JMenuItem helpInformationMI = new JMenuItem("Information");
-        JMenuItem doInformationMI = new JMenuItem("Do");
+        JMenuItem helpDoMI = new JMenuItem("Do");
 
-        helpMenu.add(doInformationMI);
-        doInformationMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "to show love to ZhangYan", "todo",
+        helpMenu.add(helpDoMI);
+        helpDoMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "to show love to ZhangYan", "todo",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                 null, null, null));
 
@@ -53,17 +53,15 @@ public class infinityLoveBox {
                 "infinityLoveBox information", JOptionPane.DEFAULT_OPTION,
                 JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
-
+        //add versionMenu Version actionlistener
+        //add versionMenu UpdateTime actionlistener
         JMenuItem versionVersionMI = new JMenuItem("Version");
         versionMenu.add(versionVersionMI);
-        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.1beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
+        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.2beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
         JMenuItem updateTimeVersionMI = new JMenuItem("Updatetime");
         versionMenu.add(updateTimeVersionMI);
         updateTimeVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "last updatetime : 06/15/2018", "UpdateTime", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
-
-
-
 
 
         //set menubar
