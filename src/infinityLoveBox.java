@@ -1,9 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class infinityLoveBox {
     private static void boxGUI() {
-
 
         //set frame layout
         JFrame.setDefaultLookAndFeelDecorated(true);
@@ -31,7 +32,23 @@ public class infinityLoveBox {
                 null, null, null));
 
         operationMenu.add(operationExitMI);
-        operationExitMI.addActionListener(e -> System.exit(0));
+        operationExitMI.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int responseZero = JOptionPane.showOptionDialog(null, "Do you want close this infinityLoveBox?", "wait a minute",
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                if (responseZero == JOptionPane.NO_OPTION) {
+                    JOptionPane.showOptionDialog(null, "I know that you wonna be close with me.", "tips",
+                            JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                            null, null, null);
+                }
+
+                //click yesbutton in the first dialog
+                if (responseZero == JOptionPane.YES_OPTION) {
+                    System.exit(0);
+                }
+            }
+        });
 
         // add helpMenu Information actionlistener
         // add helpMenu Do actionlistener
@@ -57,11 +74,14 @@ public class infinityLoveBox {
         //add versionMenu UpdateTime actionlistener
         JMenuItem versionVersionMI = new JMenuItem("Version");
         versionMenu.add(versionVersionMI);
-        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.3beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
+        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.4beta", "Version",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
         JMenuItem updateTimeVersionMI = new JMenuItem("Updatetime");
         versionMenu.add(updateTimeVersionMI);
-        updateTimeVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "last updatetime : 06/15/2018", "UpdateTime", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
+        updateTimeVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null,
+                "last updatetime : 06/16/2018", "UpdateTime", JOptionPane.DEFAULT_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
 
         //set menubar
