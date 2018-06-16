@@ -57,7 +57,7 @@ public class infinityLoveBox {
         //add versionMenu UpdateTime actionlistener
         JMenuItem versionVersionMI = new JMenuItem("Version");
         versionMenu.add(versionVersionMI);
-        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.2beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
+        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.3beta", "Version", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
         JMenuItem updateTimeVersionMI = new JMenuItem("Updatetime");
         versionMenu.add(updateTimeVersionMI);
@@ -182,6 +182,7 @@ public class infinityLoveBox {
 
         frame.setSize(400,400);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
 
     }
 
