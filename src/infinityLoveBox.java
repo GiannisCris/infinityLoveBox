@@ -201,8 +201,7 @@ public class infinityLoveBox {
         frame.setLocationRelativeTo(null);
 
     }
-
-
+    //main
     public static void main(String[] args) {
         SwingUtilities.invokeLater(infinityLoveBox::boxGUI);
     }
