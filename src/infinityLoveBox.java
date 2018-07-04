@@ -182,7 +182,6 @@ public class infinityLoveBox {
                                         null, null, null);
                             }
                         }
-
                     }
                 }
             }
