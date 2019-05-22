@@ -69,7 +69,7 @@ public class infinityLoveBox {
         //add versionMenu UpdateTime actionlistener
         JMenuItem versionVersionMI = new JMenuItem("Version");
         versionMenu.add(versionVersionMI);
-        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.6beta", "Version",
+        versionVersionMI.addActionListener(e -> JOptionPane.showOptionDialog(null, "version:0.07beta", "Version",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null));
 
         JMenuItem updateTimeVersionMI = new JMenuItem("Updatetime");
@@ -94,7 +94,6 @@ public class infinityLoveBox {
         //creat yes and no button
         JButton yesButton = new JButton("yes");
         JButton noButton = new JButton("no");
-
 
         //add yesbutton and yesbutton_actionlistener
         frame.add(yesButton);
