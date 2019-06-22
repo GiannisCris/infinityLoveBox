@@ -34,7 +34,7 @@ public class infinityLoveBox {
             int responseZero = JOptionPane.showOptionDialog(null, "Do you want close this infinityLoveBox?", "wait a minute",
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
             if (responseZero == JOptionPane.NO_OPTION) {
-                JOptionPane.showOptionDialog(null, "I know that you wonna be close with me.", "tips",
+                JOptionPane.showOptionDialog(null, "I know that you wanna be close with me.", "tips",
                         JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                         null, null, null);
             }
